@@ -1,0 +1,126 @@
+@import "../../base.scss";
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    padding: 10px 40px;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+
+    .header__left{
+        display: flex;
+
+        
+        &__menu{
+            // display: none;   
+            margin-right: 65px;
+        }
+        
+        div{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+
+            .header__left__logo{
+                object-fit: contain;
+                display: block;
+                color: red;
+                display: flex;
+                margin-right: 5px;
+                font-size: 35px;
+
+            }
+
+            p{
+                margin-bottom: 0;
+                color: #333;
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .header__center{
+        width: 40%;
+        position: relative;
+
+        input{
+            &:focus{
+                border:0.5px solid #ccc;
+                outline: 0px;
+            }
+            font-size: 1rem;
+            height: 35px;
+            width: 100%;
+            padding: 0.3rem;
+            color: $black-primary;
+            padding-left: 20px;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    
+    
+        button{
+            color: $text-color;
+            border: none;
+            background: #cacaca;
+            position: absolute;
+            right: 5px;
+            width:50px;
+            top: 4px;
+            height: 80%;
+            
+            &:focus{
+                border: none;
+            }
+            &:hover{
+                background-color: #e3e2e2;
+            }
+        }
+    }
+
+    &__icons{
+        flex: 0.15;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+            width: 40px;
+            object-fit: contain;
+            margin-left: 5px;
+        }
+
+    }
+}
+
+
+@media (max-width:$breakpoint-small){
+    .header{
+        padding: 1rem;
+
+        form{
+            flex: 1;
+        }
+
+        &__menu{
+            display: block;
+        }    
+        &__logo{
+            display: none;
+        }
+        &__icons >*:not(img){
+            display: none;
+        }
+    }
+}

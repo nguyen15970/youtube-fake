@@ -1,0 +1,242 @@
+@import "../../../base.scss";
+
+
+.watch-container{
+    background :white;
+    display: flex;
+    padding: 30px 60px 0;
+    justify-content: space-between;
+    overflow-y: scroll;
+
+   
+}
+
+.watch{
+    width: 70%;
+
+    iframe{
+        width: 100%;
+    }
+    
+    &__tag{
+        color: rgb(97, 97, 244);
+        margin-bottom: .1rem;
+
+        span{
+            margin-right: 0.3rem;
+            font-size: 14px;
+        }
+    }
+
+    &__title{
+        color: #333;
+        font-size: 1.2rem;
+    }
+    &__exten{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.3rem;
+        border-bottom:1px solid #ccc;
+
+        div{
+            display: flex;
+            @include line-clam(1);
+            max-width: 200px;
+        }
+
+        p{
+            margin-right:   2.3rem;
+            margin-bottom: 0;
+            font-size: 15px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:first-child{
+                margin-right: 0.5rem;
+            }
+
+            svg{
+                margin-right: 0.5rem;
+            }
+        }
+        &__view,&__timePublic{
+            font-size: 14px !important;
+            color: #8d8686 !important;
+            font-weight: 400 !important;
+            cursor: unset !important;
+        }
+    }
+    .watch__auth{
+        margin-top: 1rem;
+        position: relative;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+
+        .watch__auth__channel{
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+
+            div{
+
+                p{
+                    margin-bottom: 0;
+                }
+                .watch__auth__channel-name{
+                    margin-bottom: .3rem;
+                    font-size: .8rem;
+                    font-weight:600;
+                    color: #333;
+                }
+                .watch__auth__channel-subview{
+                    font-size: 0.75rem;
+                    color: #7a7575;;
+                }
+            }
+        }
+
+        .watch__auth__sub{
+            padding: .3rem .5rem;
+            position: absolute;
+            right: 2rem;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 3px;
+            background: #cc0000;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .watch__auth__descripttion{
+            padding-right: 3.5rem;
+            margin-top: 2rem;
+
+            .descripttion-text{
+                @include line-clam(2);
+            }
+
+            .watch__auth__tag {
+                margin-top: 5px;
+                @include line-clam(1);
+                
+                span{
+                    color: blue;
+                    font-size: 14px;
+                    cursor: pointer ;
+                    margin-right: .5rem;
+                    
+                }
+            }
+
+
+            pre{
+                margin-top: 5px;
+                margin-bottom: 0;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .show-description{
+                margin-top: 2rem;
+                font-size: 14px;
+                color: #8d8686;
+                font-weight: 600;
+                border:none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .watch__comment{
+        margin-top: 2rem;
+
+        &__title{
+            display: flex;
+            font-size: 1rem;
+            color: rgb(46, 45, 45);
+
+            p{
+                margin-bottom: 0;
+            }
+
+            .comment__sort{
+                margin-left: 5rem;
+
+                svg{
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        .watch__comment__input{
+            display: flex;
+            padding: 2rem 0;
+            
+
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 2rem;
+            }
+            input{
+                flex: 1;
+                outline: none;
+                border : none;
+                border-bottom: 1px solid #ccc;
+                padding-left: .1rem;
+                font-size: 15px;
+                color: black;
+                transition: 0.5s all ease;
+                &:focus{
+                    border-color: #333;
+                }
+            }
+
+        }
+    }
+}
+
+.watch-container-right{
+    padding-top: 10px;
+    width: 28%; 
+    padding-right: .2rem;
+    .sidebar__right-title{
+        overflow-x: scroll;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+
+        span{
+            margin-right: 10px;
+            margin-bottom: 0;
+            padding: 0.2rem 0.5rem;
+            white-space: nowrap;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            transition: 0.3s all ease;
+            color: black;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            &:hover{
+                background: black;
+                color: white;
+            }
+        }
+
+        .span-active{
+            background: black;
+            color: white;
+        }
+    }
+}

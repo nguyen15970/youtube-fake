@@ -1,0 +1,39 @@
+@import '../../base.scss';
+
+.sidebarRight__video{
+    display: flex;
+    margin-bottom: .5rem;
+    cursor: pointer;
+
+    img{
+        width: 186px;
+        height: 94px;
+        margin-right: 5px;
+    }
+    .sidebarRight__content{
+
+       p{
+        margin-bottom: 5px;
+       }
+        
+        &__title{
+            font-size: 13px;
+            font-weight: 600;
+            color: black;
+            @include line-clam(2);
+        }
+
+        &__channel,&__bottom{
+            font-size: 13px;
+            color: #606060;
+        }
+
+        &__bottom{
+            display: flex;
+
+            p{
+                margin-right: 12px;
+            }
+        }
+    }
+}
